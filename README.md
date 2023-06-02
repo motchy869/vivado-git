@@ -2,20 +2,20 @@
 
 Trying to make Vivado more Git-friendly.
 
-### Requirements
+## Requirements
 
 - Tested with Vivado 2021.2.1
 
-#### Windows
+### Windows
 
 - [Git for Windows](https://git-scm.com/download/win)
 - Add `C:\Program Files\Git\bin` (or wherever you have your `git.exe`) to your `PATH`
 
-#### Linux
+### Linux
 
 - Git
 
-### Installation
+## Installation
 
 Add `Vivado_init.tcl` (or append the relevant lines if you already have
 something in it) along with the `scripts` directory to:
@@ -23,7 +23,7 @@ something in it) along with the `scripts` directory to:
 - `%APPDATA%\Xilinx\Vivado` on Windows
 - `~/.Xilinx/Vivado` on Linux
 
-### How it works
+## How it works
 
 Vivado is a pain in the ass to source control decently, so these scripts provide:
 
@@ -39,7 +39,7 @@ Vivado is a pain in the ass to source control decently, so these scripts provide
   want to handle Git with an external program**
   (like Git from a terminal, SourceTree, VS Code, etc).
 
-### Workflow
+## Workflow
 
  1. When first starting a project, create it in a folder called `vivado_project`
     (e.g. `PROJECT_NAME/vivado_project`). All the untracked files will be under this directory.
@@ -48,7 +48,8 @@ Vivado is a pain in the ass to source control decently, so these scripts provide
     (e.g. `PROJECT_NAME/src`).
 
     Here is an example of a possible project structure:
-    ```
+
+    ``` txt
     PROJECT_NAME
         ├── .git
         ├── .gitignore
@@ -103,14 +104,14 @@ Vivado is a pain in the ass to source control decently, so these scripts provide
     `Tools -> Run Tcl Script...` and selecting the `PROJECT_NAME.tcl` file
     created earlier. This will regenerate the project so that you can continue to work.
 
-### Sample project
+## Sample project
 
 Refer to the `reaction_timer` project under `sample` if you want an
 example on how you can structure your project.
 
-### Notes
+## Notes
 
-#### Block design support
+### Block design support
 
 If a block design is present, Tcl procedures will be integrated in the project
 generator file to regenerate it. Make sure to specify it as `<Local to Project>`
@@ -130,7 +131,7 @@ handwritten one under source control.
 
 Also note that the layout information of the block design will not be kept.
 
-#### Board part and IP repositories paths
+### Board part and IP repositories paths
 
 Only board part and IP repositories inside the project are stored in the project
 generator script.
