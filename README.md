@@ -1,6 +1,6 @@
 # vivado-git
 
-Trying to make Vivado more Git-friendly.
+This is a slightly-modified version of [barbedo/vivado-git](https://github.com/barbedo/vivado-git).
 
 ## 1. Requirements
 
@@ -131,10 +131,6 @@ handwritten one under source control.
 
 Also note that the layout information of the block design will not be kept.
 
-### 6.2. Board part and IP repositories paths
+### 6.2. Debug
 
-Only board part and IP repositories inside the project are stored in the project
-generator script.
-
-If you have a system wide board part or IP repository, you will need to add it manually
-after recreating the project from the Tcl script (e.g. via `Settings --> Board Repository`).
+When you modified a script such as `write_project_tcl_git.tcl` during Vivado is running, you should reload it with `source write_project_tcl_git.tcl` on the Tcl Console.
